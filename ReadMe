@@ -1,0 +1,13 @@
+# Directory Structure
+# dynamic_menu_management/
+# ├── app.py  (Main Flask app file)
+# ├── config.py  (Configuration settings)
+# ├── static/
+# │   ├── styles.css (CSS files)
+# │   ├── script.js  (JavaScript files)
+# ├── templates/
+# │   ├── index.html (Frontend template for menu display)
+# ├── database/
+# │   ├── schema.sql (Database schema script)
+# ├── requirements.txt (Required Python packages)
+# ├── README.md (Project documentation)

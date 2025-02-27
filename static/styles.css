@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 20px;
+}
+
+h2 {
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Menu Tree Container */
+.menu-tree {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Menu Items */
+.menu-tree ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Individual Menu Box */
+.menu-tree li {
+    background: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px 15px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 120px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.menu-tree li:hover {
+    background: #e9f5ff;
+    transform: scale(1.05);
+}
+
+/* Parent to Child Connector */
+.menu-tree li::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background-color: #007bff;
+    transform: translateX(-50%);
+}
+
+/* Hide connector for root-level menus */
+.menu-tree > ul > li::before {
+    display: none;
+}
+
+/* Horizontal Connector Between Sibling Menus */
+.menu-tree ul::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* Arrow Down for Parent-Child Relation */
+.menu-tree li .arrow-down {
+    font-size: 20px;
+    color: #007bff;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Collapsible Arrow Rotation */
+.menu-tree li .toggle-btn i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-tree li .toggle-btn.collapsed i {
+    transform: rotate(-90deg);
+}
+
+/* Tree Item Styling */
+.menu-tree li .tree-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Button Styling */
+.menu-tree li .action-btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.menu-tree li .edit-btn,
+.menu-tree li .delete-btn {
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu-tree li .edit-btn {
+    color: #ffc107;
+}
+.menu-tree li .edit-btn:hover {
+    color: #d39e00;
+}
+
+.menu-tree li .delete-btn {
+    color: red;
+}
+.menu-tree li .delete-btn:hover {
+    color: darkred;
+}
